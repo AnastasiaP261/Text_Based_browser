@@ -1,4 +1,4 @@
-# Text_Based_browser
+# Текстовый браузер
 
 ### Данный проект был написан как проект трека Python Developer платформы JetBrains Academy
 
