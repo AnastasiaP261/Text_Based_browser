@@ -1,0 +1,643 @@
+[34m¶
+[0mRelease v2.25.1. (Installation)
+[34mInstallation
+[34m
+[34m
+[34m
+[34m
+[0mRequests is an elegant and simple HTTP library for Python, built for human beings.
+[0mBehold, the power of Requests:
+[0mSee similar code, sans Requests.
+[34msimilar code, sans Requests
+[0mRequests allows you to send HTTP/1.1 requests extremely easily.
+There’s no need to manually add query strings to your
+URLs, or to form-encode your POST data. Keep-alive and HTTP connection pooling
+are 100% automatic, thanks to urllib3.
+[34murllib3
+[34m¶
+[0mRequests is ready for today’s web.
+[0m
+Keep-Alive & Connection Pooling
+International Domains and URLs
+Sessions with Cookie Persistence
+Browser-style SSL Verification
+Automatic Content Decoding
+Basic/Digest Authentication
+Elegant Key/Value Cookies
+Automatic Decompression
+Unicode Response Bodies
+HTTP(S) Proxy Support
+Multipart File Uploads
+Streaming Downloads
+Connection Timeouts
+Chunked Requests
+.netrc Support[0mKeep-Alive & Connection Pooling
+[0mInternational Domains and URLs
+[0mSessions with Cookie Persistence
+[0mBrowser-style SSL Verification
+[0mAutomatic Content Decoding
+[0mBasic/Digest Authentication
+[0mElegant Key/Value Cookies
+[0mAutomatic Decompression
+[0mUnicode Response Bodies
+[0mHTTP(S) Proxy Support
+[0mMultipart File Uploads
+[0mStreaming Downloads
+[0mConnection Timeouts
+[0mChunked Requests
+[0m.netrc Support
+[0mRequests officially supports Python 2.7 & 3.5+, and runs great on PyPy.
+[34m¶
+[0mThis part of the documentation, which is mostly prose, begins with some
+background information about Requests, then focuses on step-by-step
+instructions for getting the most out of Requests.
+[0m
+Installation of Requests
+$ python -m pip install requests
+Get the Source Code
+Quickstart
+Make a Request
+Passing Parameters In URLs
+Response Content
+Binary Response Content
+JSON Response Content
+Raw Response Content
+Custom Headers
+More complicated POST requests
+POST a Multipart-Encoded File
+Response Status Codes
+Response Headers
+Cookies
+Redirection and History
+Timeouts
+Errors and Exceptions
+Advanced Usage
+Session Objects
+Request and Response Objects
+Prepared Requests
+SSL Cert Verification
+Client Side Certificates
+CA Certificates
+Body Content Workflow
+Keep-Alive
+Streaming Uploads
+Chunk-Encoded Requests
+POST Multiple Multipart-Encoded Files
+Event Hooks
+Custom Authentication
+Streaming Requests
+Proxies
+Compliance
+HTTP Verbs
+Custom Verbs
+Link Headers
+Transport Adapters
+Blocking Or Non-Blocking?
+Header Ordering
+Timeouts
+Authentication
+Basic Authentication
+Digest Authentication
+OAuth 1 Authentication
+OAuth 2 and OpenID Connect Authentication
+Other Authentication
+New Forms of Authentication[0mInstallation of Requests
+$ python -m pip install requests
+Get the Source Code
+[34mInstallation of Requests
+[0m
+$ python -m pip install requests
+Get the Source Code[0m$ python -m pip install requests
+[34m$ python -m pip install requests
+[0mGet the Source Code
+[34mGet the Source Code
+[0mQuickstart
+Make a Request
+Passing Parameters In URLs
+Response Content
+Binary Response Content
+JSON Response Content
+Raw Response Content
+Custom Headers
+More complicated POST requests
+POST a Multipart-Encoded File
+Response Status Codes
+Response Headers
+Cookies
+Redirection and History
+Timeouts
+Errors and Exceptions
+[34mQuickstart
+[0m
+Make a Request
+Passing Parameters In URLs
+Response Content
+Binary Response Content
+JSON Response Content
+Raw Response Content
+Custom Headers
+More complicated POST requests
+POST a Multipart-Encoded File
+Response Status Codes
+Response Headers
+Cookies
+Redirection and History
+Timeouts
+Errors and Exceptions[0mMake a Request
+[34mMake a Request
+[0mPassing Parameters In URLs
+[34mPassing Parameters In URLs
+[0mResponse Content
+[34mResponse Content
+[0mBinary Response Content
+[34mBinary Response Content
+[0mJSON Response Content
+[34mJSON Response Content
+[0mRaw Response Content
+[34mRaw Response Content
+[0mCustom Headers
+[34mCustom Headers
+[0mMore complicated POST requests
+[34mMore complicated POST requests
+[0mPOST a Multipart-Encoded File
+[34mPOST a Multipart-Encoded File
+[0mResponse Status Codes
+[34mResponse Status Codes
+[0mResponse Headers
+[34mResponse Headers
+[0mCookies
+[34mCookies
+[0mRedirection and History
+[34mRedirection and History
+[0mTimeouts
+[34mTimeouts
+[0mErrors and Exceptions
+[34mErrors and Exceptions
+[0mAdvanced Usage
+Session Objects
+Request and Response Objects
+Prepared Requests
+SSL Cert Verification
+Client Side Certificates
+CA Certificates
+Body Content Workflow
+Keep-Alive
+Streaming Uploads
+Chunk-Encoded Requests
+POST Multiple Multipart-Encoded Files
+Event Hooks
+Custom Authentication
+Streaming Requests
+Proxies
+Compliance
+HTTP Verbs
+Custom Verbs
+Link Headers
+Transport Adapters
+Blocking Or Non-Blocking?
+Header Ordering
+Timeouts
+[34mAdvanced Usage
+[0m
+Session Objects
+Request and Response Objects
+Prepared Requests
+SSL Cert Verification
+Client Side Certificates
+CA Certificates
+Body Content Workflow
+Keep-Alive
+Streaming Uploads
+Chunk-Encoded Requests
+POST Multiple Multipart-Encoded Files
+Event Hooks
+Custom Authentication
+Streaming Requests
+Proxies
+Compliance
+HTTP Verbs
+Custom Verbs
+Link Headers
+Transport Adapters
+Blocking Or Non-Blocking?
+Header Ordering
+Timeouts[0mSession Objects
+[34mSession Objects
+[0mRequest and Response Objects
+[34mRequest and Response Objects
+[0mPrepared Requests
+[34mPrepared Requests
+[0mSSL Cert Verification
+[34mSSL Cert Verification
+[0mClient Side Certificates
+[34mClient Side Certificates
+[0mCA Certificates
+[34mCA Certificates
+[0mBody Content Workflow
+[34mBody Content Workflow
+[0mKeep-Alive
+[34mKeep-Alive
+[0mStreaming Uploads
+[34mStreaming Uploads
+[0mChunk-Encoded Requests
+[34mChunk-Encoded Requests
+[0mPOST Multiple Multipart-Encoded Files
+[34mPOST Multiple Multipart-Encoded Files
+[0mEvent Hooks
+[34mEvent Hooks
+[0mCustom Authentication
+[34mCustom Authentication
+[0mStreaming Requests
+[34mStreaming Requests
+[0mProxies
+[34mProxies
+[0mCompliance
+[34mCompliance
+[0mHTTP Verbs
+[34mHTTP Verbs
+[0mCustom Verbs
+[34mCustom Verbs
+[0mLink Headers
+[34mLink Headers
+[0mTransport Adapters
+[34mTransport Adapters
+[0mBlocking Or Non-Blocking?
+[34mBlocking Or Non-Blocking?
+[0mHeader Ordering
+[34mHeader Ordering
+[0mTimeouts
+[34mTimeouts
+[0mAuthentication
+Basic Authentication
+Digest Authentication
+OAuth 1 Authentication
+OAuth 2 and OpenID Connect Authentication
+Other Authentication
+New Forms of Authentication
+[34mAuthentication
+[0m
+Basic Authentication
+Digest Authentication
+OAuth 1 Authentication
+OAuth 2 and OpenID Connect Authentication
+Other Authentication
+New Forms of Authentication[0mBasic Authentication
+[34mBasic Authentication
+[0mDigest Authentication
+[34mDigest Authentication
+[0mOAuth 1 Authentication
+[34mOAuth 1 Authentication
+[0mOAuth 2 and OpenID Connect Authentication
+[34mOAuth 2 and OpenID Connect Authentication
+[0mOther Authentication
+[34mOther Authentication
+[0mNew Forms of Authentication
+[34mNew Forms of Authentication
+[34m¶
+[0mThis part of the documentation, which is mostly prose, details the
+Requests ecosystem and community.
+[0m
+Recommended Packages and Extensions
+Certifi CA Bundle
+CacheControl
+Requests-Toolbelt
+Requests-Threads
+Requests-OAuthlib
+Betamax
+Frequently Asked Questions
+Encoded Data?
+Custom User-Agents?
+Why not Httplib2?
+Python 3 Support?
+Python 2 Support?
+What are “hostname doesn’t match” errors?
+Integrations
+Python for iOS
+Articles & Talks
+Support
+Stack Overflow
+File an Issue
+Send a Tweet
+Vulnerability Disclosure
+Process
+Previous CVEs
+Release Process and Rules
+Major Releases
+Minor Releases
+Hotfix Releases
+Reasoning[0mRecommended Packages and Extensions
+Certifi CA Bundle
+CacheControl
+Requests-Toolbelt
+Requests-Threads
+Requests-OAuthlib
+Betamax
+[34mRecommended Packages and Extensions
+[0m
+Certifi CA Bundle
+CacheControl
+Requests-Toolbelt
+Requests-Threads
+Requests-OAuthlib
+Betamax[0mCertifi CA Bundle
+[34mCertifi CA Bundle
+[0mCacheControl
+[34mCacheControl
+[0mRequests-Toolbelt
+[34mRequests-Toolbelt
+[0mRequests-Threads
+[34mRequests-Threads
+[0mRequests-OAuthlib
+[34mRequests-OAuthlib
+[0mBetamax
+[34mBetamax
+[0mFrequently Asked Questions
+Encoded Data?
+Custom User-Agents?
+Why not Httplib2?
+Python 3 Support?
+Python 2 Support?
+What are “hostname doesn’t match” errors?
+[34mFrequently Asked Questions
+[0m
+Encoded Data?
+Custom User-Agents?
+Why not Httplib2?
+Python 3 Support?
+Python 2 Support?
+What are “hostname doesn’t match” errors?[0mEncoded Data?
+[34mEncoded Data?
+[0mCustom User-Agents?
+[34mCustom User-Agents?
+[0mWhy not Httplib2?
+[34mWhy not Httplib2?
+[0mPython 3 Support?
+[34mPython 3 Support?
+[0mPython 2 Support?
+[34mPython 2 Support?
+[0mWhat are “hostname doesn’t match” errors?
+[34mWhat are “hostname doesn’t match” errors?
+[0mIntegrations
+Python for iOS
+[34mIntegrations
+[0m
+Python for iOS[0mPython for iOS
+[34mPython for iOS
+[0mArticles & Talks
+[34mArticles & Talks
+[0mSupport
+Stack Overflow
+File an Issue
+Send a Tweet
+[34mSupport
+[0m
+Stack Overflow
+File an Issue
+Send a Tweet[0mStack Overflow
+[34mStack Overflow
+[0mFile an Issue
+[34mFile an Issue
+[0mSend a Tweet
+[34mSend a Tweet
+[0mVulnerability Disclosure
+Process
+Previous CVEs
+[34mVulnerability Disclosure
+[0m
+Process
+Previous CVEs[0mProcess
+[34mProcess
+[0mPrevious CVEs
+[34mPrevious CVEs
+[0mRelease Process and Rules
+Major Releases
+Minor Releases
+Hotfix Releases
+Reasoning
+[34mRelease Process and Rules
+[0m
+Major Releases
+Minor Releases
+Hotfix Releases
+Reasoning[0mMajor Releases
+[34mMajor Releases
+[0mMinor Releases
+[34mMinor Releases
+[0mHotfix Releases
+[34mHotfix Releases
+[0mReasoning
+[34mReasoning
+[0m
+Community Updates
+Release History[0mCommunity Updates
+[34mCommunity Updates
+[0mRelease History
+[34mRelease History
+[34m¶
+[0mIf you are looking for information on a specific function, class, or method,
+this part of the documentation is for you.
+[0m
+Developer Interface
+Main Interface
+Exceptions
+Request Sessions
+Lower-Level Classes
+Lower-Lower-Level Classes
+Authentication
+Encodings
+Cookies
+Status Code Lookup
+Migrating to 1.x
+Migrating to 2.x[0mDeveloper Interface
+Main Interface
+Exceptions
+Request Sessions
+Lower-Level Classes
+Lower-Lower-Level Classes
+Authentication
+Encodings
+Cookies
+Status Code Lookup
+Migrating to 1.x
+Migrating to 2.x
+[34mDeveloper Interface
+[0m
+Main Interface
+Exceptions
+Request Sessions
+Lower-Level Classes
+Lower-Lower-Level Classes
+Authentication
+Encodings
+Cookies
+Status Code Lookup
+Migrating to 1.x
+Migrating to 2.x[0mMain Interface
+[34mMain Interface
+[0mExceptions
+[34mExceptions
+[0mRequest Sessions
+[34mRequest Sessions
+[0mLower-Level Classes
+[34mLower-Level Classes
+[0mLower-Lower-Level Classes
+[34mLower-Lower-Level Classes
+[0mAuthentication
+[34mAuthentication
+[0mEncodings
+[34mEncodings
+[0mCookies
+[34mCookies
+[0mStatus Code Lookup
+[34mStatus Code Lookup
+[0mMigrating to 1.x
+[34mMigrating to 1.x
+[0mMigrating to 2.x
+[34mMigrating to 2.x
+[34m¶
+[0mIf you want to contribute to the project, this part of the documentation is for
+you.
+[0m
+Contributor’s Guide
+Be Cordial
+Get Early Feedback
+Contribution Suitability
+Code Contributions
+Steps for Submitting Code
+Code Review
+New Contributors
+Kenneth Reitz’s Code Style™
+Documentation Contributions
+Bug Reports
+Feature Requests
+Authors
+Keepers of the Crystals
+Previous Keepers of Crystals
+Patches and Suggestions[0mContributor’s Guide
+Be Cordial
+Get Early Feedback
+Contribution Suitability
+Code Contributions
+Steps for Submitting Code
+Code Review
+New Contributors
+Kenneth Reitz’s Code Style™
+Documentation Contributions
+Bug Reports
+Feature Requests
+[34mContributor’s Guide
+[0m
+Be Cordial
+Get Early Feedback
+Contribution Suitability
+Code Contributions
+Steps for Submitting Code
+Code Review
+New Contributors
+Kenneth Reitz’s Code Style™
+Documentation Contributions
+Bug Reports
+Feature Requests[0mBe Cordial
+[34mBe Cordial
+[0mGet Early Feedback
+[34mGet Early Feedback
+[0mContribution Suitability
+[34mContribution Suitability
+[0mCode Contributions
+Steps for Submitting Code
+Code Review
+New Contributors
+Kenneth Reitz’s Code Style™
+[34mCode Contributions
+[0m
+Steps for Submitting Code
+Code Review
+New Contributors
+Kenneth Reitz’s Code Style™[0mSteps for Submitting Code
+[34mSteps for Submitting Code
+[0mCode Review
+[34mCode Review
+[0mNew Contributors
+[34mNew Contributors
+[0mKenneth Reitz’s Code Style™
+[34mKenneth Reitz’s Code Style™
+[0mDocumentation Contributions
+[34mDocumentation Contributions
+[0mBug Reports
+[34mBug Reports
+[0mFeature Requests
+[34mFeature Requests
+[0mAuthors
+Keepers of the Crystals
+Previous Keepers of Crystals
+Patches and Suggestions
+[34mAuthors
+[0m
+Keepers of the Crystals
+Previous Keepers of Crystals
+Patches and Suggestions[0mKeepers of the Crystals
+[34mKeepers of the Crystals
+[0mPrevious Keepers of Crystals
+[34mPrevious Keepers of Crystals
+[0mPatches and Suggestions
+[34mPatches and Suggestions
+[0mThere are no more guides. You are now guideless.
+Good luck.
+[0m
+[0m
+  Requests is an elegant and simple HTTP library for Python, built for
+  human beings.[0mSponsored by CERT Gouvernemental - GOVCERT.LU.
+[34mCERT Gouvernemental - GOVCERT.LU
+[0m
+Quickstart
+Advanced Usage
+API Reference
+Release History
+Contributors GuideRecommended Packages and ExtensionsRequests @ GitHub
+Requests @ PyPI
+Issue Tracker[0mQuickstart
+[34mQuickstart
+[0mAdvanced Usage
+[34mAdvanced Usage
+[0mAPI Reference
+[34mAPI Reference
+[0mRelease History
+[34mRelease History
+[0mContributors Guide
+[34mContributors Guide
+[0m
+[0mRecommended Packages and Extensions
+[34mRecommended Packages and Extensions
+[0m
+[0mRequests @ GitHub
+[34mRequests @ GitHub
+[0mRequests @ PyPI
+[34mRequests @ PyPI
+[0mIssue Tracker
+[34mIssue Tracker
+[0m
+English
+French
+German
+Japanese
+Chinese
+Portuguese
+Italian
+Spanish[0mEnglish
+[34mEnglish
+[0mFrench
+[34mFrench
+[0mGerman
+[34mGerman
+[0mJapanese
+[34mJapanese
+[0mChinese
+[34mChinese
+[0mPortuguese
+[34mPortuguese
+[0mItalian
+[34mItalian
+[0mSpanish
+[34mSpanish
+[34mKenneth Reitz
+[34m
